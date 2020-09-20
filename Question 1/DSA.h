@@ -18,5 +18,6 @@ void searching(int value);
 unsigned int getSize() const;
 int *getData();
 void print(int i);
+void setData(int arr[], int i);
 };
 #endif

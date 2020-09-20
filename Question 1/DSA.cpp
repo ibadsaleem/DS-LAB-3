@@ -43,7 +43,9 @@ void DSA::insertion(int val,int i)
 		cout<<"Array out of Bound";
 		exit(0);
 	}
+	else
 	Data[i]=val;
+	DSA::setData(Data, i);
 }
 
 void DSA::searching (int value)
@@ -52,8 +54,9 @@ void DSA::searching (int value)
 	{
 		if (Data[i]==value)
 		{
-			cout<<"Data: "<<Data[i]<<" at "<<"i"; 
+			cout<<"Data: "<<Data[i]<<" at Data["<<i<<"]\n\n"; 
 		}
+		
 	}
 }
 
@@ -75,7 +78,14 @@ void DSA::searching (int value)
 		 exit(0);
 	 }
 	 else {
-		 cout <<*(Data+i);
+		 cout <<Data[i];
 	 }
  }
 
+void DSA::setData(int arr[],int i)
+{
+	for (int j = 0; j < i;i++)
+	{
+		Data[j] = arr[j];
+	}
+}

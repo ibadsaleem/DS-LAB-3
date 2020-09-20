@@ -35,6 +35,7 @@ void ODSA::insertion(int a,int b)
     int* arr = ODSA::getData();
     arr[b] = a;
     Sort(arr,b);
+    DSA::setData(arr, b);
 }
 
 void ODSA::searching(int a)
